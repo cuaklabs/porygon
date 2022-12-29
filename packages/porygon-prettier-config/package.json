@@ -1,0 +1,16 @@
+{
+  "author": "Cuak McCuackl <cuak.mccuakl@cuaklabs.com>",
+  "name": "@cuaklabs/porygon-prettier-config",
+  "description": "common prettier config for porygon",
+  "main": "index.js",
+  "license": "See license in \"LICENSE\" file",
+  "bugs": {
+    "url": "https://github.com/cuaklabs/porygon/issues"
+  },
+  "homepage": "https://github.com/cuaklabs/porygon#readme",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cuaklabs/porygon.git"
+  }
+}
