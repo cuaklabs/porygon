@@ -4,7 +4,18 @@
   "description": "Hexagonal architecture framework",
   "packageManager": "pnpm@7.21.0",
   "scripts": {
-    "prepare": "husky install"
+    "build:all": "turbo run build",
+    "commit": "commit",
+    "format:all": "turbo run format",
+    "lint:all": "turbo run lint",
+    "prepare": "husky install",
+    "test:integration:js": "turbo test:integration:js",
+    "test:js": "turbo run test:js",
+    "test:mutation": "turbo run test:mutation --concurrency=1",
+    "test:uncommitted": "turbo run test:uncommitted --filter [HEAD]",
+    "test:unit:js:coverage": "turbo run test:unit:js:coverage",
+    "test:unit:js": "turbo run test:unit:js",
+    "test": "turbo run test"
   },
   "repository": {
     "type": "git",
