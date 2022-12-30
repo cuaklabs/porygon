@@ -1,0 +1,19 @@
+{
+  "name": "@cuaklabs/eslint-config-porygon",
+  "private": true,
+  "description": "common eslint config for porygon monorepo packages",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cuaklabs/porygon.git"
+  },
+  "author": "Cuak McCuackl <cuak.mccuakl@cuaklabs.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cuaklabs/porygon/issues"
+  },
+  "homepage": "https://github.com/cuaklabs/porygon#readme",
+  "devDependencies": {
+    "eslint": "8.30.0"
+  }
+}
