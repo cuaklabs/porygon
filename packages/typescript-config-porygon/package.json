@@ -1,0 +1,15 @@
+{
+  "name": "@cuaklabs/typescript-config-porygon",
+  "private": true,
+  "description": "common typescript config for porygon monorepo packages",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cuaklabs/porygon.git"
+  },
+  "author": "Cuak McCuackl <cuak.mccuakl@cuaklabs.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cuaklabs/porygon/issues"
+  },
+  "homepage": "https://github.com/cuaklabs/porygon#readme"
+}
