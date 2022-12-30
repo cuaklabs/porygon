@@ -25,6 +25,8 @@
     "@commitlint/cli": "17.3.0",
     "@commitlint/config-conventional": "17.3.0",
     "@commitlint/prompt-cli": "17.3.0",
+    "@cuaklabs/eslint-config-porygon": "workspace:./packages/eslint-config-porygon",
+    "@cuaklabs/porygon-prettier-config": "workspace:./packages/porygon-prettier-config",
     "husky": "8.0.2",
     "lint-staged": "13.1.0",
     "turbo": "1.6.3"
