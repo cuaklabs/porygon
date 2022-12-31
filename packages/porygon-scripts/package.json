@@ -1,0 +1,19 @@
+{
+  "name": "@cuaklabs/porygon-scripts",
+  "private": true,
+  "description": "common scripts for porygon monorepo packages",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cuaklabs/porygon.git"
+  },
+  "author": "Cuak McCuackl <cuak.mccuakl@cuaklabs.com>",
+  "license": "See license in \"LICENSE\" file",
+  "bugs": {
+    "url": "https://github.com/cuaklabs/porygon/issues"
+  },
+  "type": "module",
+  "homepage": "https://github.com/cuaklabs/porygon#readme",
+  "bin": {
+    "porygon-get-affected-projects": "./bin/getAffectedProjects.js"
+  }
+}

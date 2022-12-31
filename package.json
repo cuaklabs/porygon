@@ -40,6 +40,7 @@
     "@cuaklabs/eslint-config-porygon": "workspace:./packages/eslint-config-porygon",
     "@cuaklabs/porygon-jest-config": "workspace:./packages/porygon-jest-config",
     "@cuaklabs/porygon-prettier-config": "workspace:./packages/porygon-prettier-config",
+    "@cuaklabs/porygon-scripts": "workspace:./packages/porygon-scripts",
     "@cuaklabs/typescript-config-porygon": "workspace:./packages/typescript-config-porygon",
     "husky": "8.0.2",
     "lint-staged": "13.1.0",
