@@ -1,0 +1,20 @@
+# Typescript compiled files
+/lib/**
+
+# npm installed packages
+/node_modules
+
+# pnpm lock files
+/pnpm-lock.yaml
+
+# Stryker reports
+/reports
+
+# Stryker temp files
+/stryker-tmp
+
+# Jest coverage report
+/coverage
+
+# Turborepo files
+.turbo/
