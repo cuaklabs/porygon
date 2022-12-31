@@ -149,69 +149,10 @@ jobs:
         if: ${{ failure() && contains(github.event.head_commit.message, '[ci-open-ssh]') }}
         run: sleep 1h
 
-  test-e2e:
-    name: e2e tests
-    needs: build
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-
-      - name: Install Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: 18
-
-      - uses: pnpm/action-setup@v2
-        name: Install pnpm
-        id: pnpm-install
-        with:
-          version: 7
-          run_install: false
-
-      - name: Get pnpm store directory
-        id: pnpm-cache
-        run: |
-          echo "pnpm_cache_dir=$(pnpm store path)" >> $GITHUB_OUTPUT
-
-      - uses: actions/cache@v3
-        name: Setup pnpm cache
-        with:
-          path: ${{ steps.pnpm-cache.outputs.pnpm_cache_dir }}
-          key: pnpm-store-${{ hashFiles('**/package.json') }}
-          restore-keys: |
-            pnpm-store-
-        
-      - name: Install dependencies
-        run: pnpm install
-
-      - name: Get current git commit hash
-        id: get-git-commit-hash
-        run: |
-          echo "gitCommitHash=$(git rev-parse HEAD)" >> $GITHUB_OUTPUT
-
-      - uses: actions/cache@v3
-        id: ts-build-cache
-        with:
-          path: |
-            ./packages
-          key: ts-build-${{ steps.get-git-commit-hash.outputs.gitCommitHash }}
-          restore-keys: |
-            ts-build-${{ steps.get-git-commit-hash.outputs.gitCommitHash }}
-
-      - name: Build on cache miss
-        run: pnpm run build:all
-        if: ${{ !steps.ts-build-cache.outputs.cache-hit }}
-
-      - name: Launch E2E tests
-        run: pnpm run test:e2e:js --profile ci
-
   done:
     name: Done
     needs:
       - test-package
-      - test-e2e
     runs-on: ubuntu-latest
     steps:
       - run: 'echo "Done!"'
