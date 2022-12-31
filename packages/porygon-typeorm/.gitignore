@@ -1,6 +1,9 @@
 # Typescript compiled files
 /lib/**
 
+# Temporal files
+/tmp
+
 # npm installed packages
 /node_modules
 
