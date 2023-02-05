@@ -2,7 +2,7 @@
   "name": "root",
   "private": true,
   "description": "Hexagonal architecture framework",
-  "packageManager": "pnpm@7.24.3",
+  "packageManager": "pnpm@7.26.3",
   "scripts": {
     "build:all": "turbo run build",
     "commit": "commit",
@@ -34,9 +34,9 @@
   "homepage": "https://github.com/cuaklabs/porygon#readme",
   "devDependencies": {
     "@changesets/cli": "^2.26.0",
-    "@commitlint/cli": "17.4.1",
-    "@commitlint/config-conventional": "17.4.0",
-    "@commitlint/prompt-cli": "17.4.1",
+    "@commitlint/cli": "17.4.2",
+    "@commitlint/config-conventional": "17.4.2",
+    "@commitlint/prompt-cli": "17.4.2",
     "@cuaklabs/eslint-config-porygon": "workspace:./packages/eslint-config-porygon",
     "@cuaklabs/porygon-jest-config": "workspace:./packages/porygon-jest-config",
     "@cuaklabs/porygon-prettier-config": "workspace:./packages/porygon-prettier-config",
@@ -44,6 +44,6 @@
     "@cuaklabs/typescript-config-porygon": "workspace:./packages/typescript-config-porygon",
     "husky": "8.0.3",
     "lint-staged": "13.1.0",
-    "turbo": "1.7.0"
+    "turbo": "1.7.3"
   }
 }
