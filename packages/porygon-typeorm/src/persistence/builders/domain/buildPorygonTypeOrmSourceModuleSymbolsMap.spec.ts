@@ -1,6 +1,6 @@
 import { beforeAll, describe, expect, it } from '@jest/globals';
 
-import { PorygonTypeOrmSourceModuleSymbolsMap } from '../models/domain/PorygonTypeOrmSourceModuleSymbolsMap';
+import { PorygonTypeOrmSourceModuleSymbolsMap } from '../../models/domain/PorygonTypeOrmSourceModuleSymbolsMap';
 import { buildPorygonTypeOrmSourceModuleSymbolsMap } from './buildPorygonTypeOrmSourceModuleSymbolsMap';
 
 describe(buildPorygonTypeOrmSourceModuleSymbolsMap.name, () => {

@@ -1,5 +1,5 @@
-import { PorygonTypeOrmSourceModuleSymbolsMap } from '../models/domain/PorygonTypeOrmSourceModuleSymbolsMap';
-import { porygonTypeOrmSymbolKeyVersion } from '../models/domain/porygonTypeOrmSymbolKeyVersion';
+import { PorygonTypeOrmSourceModuleSymbolsMap } from '../../models/domain/PorygonTypeOrmSourceModuleSymbolsMap';
+import { porygonTypeOrmSymbolKeyVersion } from '../../models/domain/porygonTypeOrmSymbolKeyVersion';
 
 export function buildPorygonTypeOrmSourceModuleSymbolsMap(
   alias: string = '',

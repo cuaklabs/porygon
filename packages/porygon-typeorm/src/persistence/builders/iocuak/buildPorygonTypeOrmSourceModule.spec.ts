@@ -9,8 +9,8 @@ import {
 } from '@cuaklabs/iocuak';
 import { DataSource, DataSourceOptions } from 'typeorm';
 
-import { PorygonTypeOrmSourceModuleSymbolsMap } from '../models/domain/PorygonTypeOrmSourceModuleSymbolsMap';
-import { buildPorygonTypeOrmSourceModule } from './buildPorygonTypeOrmSourceModule';
+import { PorygonTypeOrmSourceModuleSymbolsMap } from '../../models/domain/PorygonTypeOrmSourceModuleSymbolsMap';
+import { buildPorygonTypeOrmSourceModule } from '../iocuak/buildPorygonTypeOrmSourceModule';
 
 describe(buildPorygonTypeOrmSourceModule.name, () => {
   let dataSourceOptionsFixture: DataSourceOptions;

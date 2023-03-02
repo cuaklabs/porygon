@@ -1,11 +1,11 @@
 import { Newable } from '@cuaklabs/iocuak';
 import { ModuleTypeToSymbolMap } from '@cuaklabs/porygon-common';
 
-import { hashString } from '../../foundation/calculations/hashString';
-import { PorygonTypeOrmEntityModuleSymbolsMap } from '../models/domain/PorygonTypeOrmEntityModuleSymbolsMap';
-import { PorygonTypeOrmEntityModuleType } from '../models/domain/PorygonTypeOrmEntityModuleType';
-import { PorygonTypeOrmSourceModuleSymbolsMap } from '../models/domain/PorygonTypeOrmSourceModuleSymbolsMap';
-import { porygonTypeOrmSymbolKeyVersion } from '../models/domain/porygonTypeOrmSymbolKeyVersion';
+import { hashString } from '../../../foundation/calculations/hashString';
+import { PorygonTypeOrmEntityModuleSymbolsMap } from '../../models/domain/PorygonTypeOrmEntityModuleSymbolsMap';
+import { PorygonTypeOrmEntityModuleType } from '../../models/domain/PorygonTypeOrmEntityModuleType';
+import { PorygonTypeOrmSourceModuleSymbolsMap } from '../../models/domain/PorygonTypeOrmSourceModuleSymbolsMap';
+import { porygonTypeOrmSymbolKeyVersion } from '../../models/domain/porygonTypeOrmSymbolKeyVersion';
 
 export function buildPorygonTypeOrmEntityModuleSymbolsMap<TEntity>(
   entity: Newable<TEntity>,

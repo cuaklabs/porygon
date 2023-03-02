@@ -4,7 +4,7 @@ import {
 } from '@cuaklabs/iocuak';
 import { DataSource, DataSourceOptions } from 'typeorm';
 
-import { PorygonTypeOrmSourceModuleSymbolsMap } from '../models/domain/PorygonTypeOrmSourceModuleSymbolsMap';
+import { PorygonTypeOrmSourceModuleSymbolsMap } from '../../models/domain/PorygonTypeOrmSourceModuleSymbolsMap';
 
 export async function buildPorygonTypeOrmSourceModule(
   dataSourceOptions: DataSourceOptions,

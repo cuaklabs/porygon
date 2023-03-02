@@ -5,17 +5,16 @@ jest.mock('./buildPorygonTypeOrmSourceModule');
 import {
   ContainerModule,
   ContainerModuleFactoryMetadata,
-  ServiceId,
 } from '@cuaklabs/iocuak';
 import { DataSourceOptions } from 'typeorm';
 
-import { PorygonTypeOrmSourceModuleSymbolsMap } from '../models/domain/PorygonTypeOrmSourceModuleSymbolsMap';
+import { PorygonTypeOrmSourceModuleSymbolsMap } from '../../models/domain/PorygonTypeOrmSourceModuleSymbolsMap';
 import { buildPorygonTypeOrmSourceModule } from './buildPorygonTypeOrmSourceModule';
-import { buildPorygonTypeOrmSourceModuleMetadataAsync } from './buildPorygonTypeOrmSourceModuleMetadataAsync';
+import { buildPorygonTypeOrmSourceModuleMetadata } from './buildPorygonTypeOrmSourceModuleMetadata';
 
-describe(buildPorygonTypeOrmSourceModuleMetadataAsync.name, () => {
+describe(buildPorygonTypeOrmSourceModuleMetadata.name, () => {
   describe('when called', () => {
-    let dataSourceOptionsServiceIdFixture: ServiceId;
+    let dataSourceOptionsFixture: DataSourceOptions;
     let porygonTypeOrmSourceModuleSymbolsMapFixture: PorygonTypeOrmSourceModuleSymbolsMap;
 
     let containerModuleMetadata: ContainerModuleFactoryMetadata;
@@ -23,13 +22,14 @@ describe(buildPorygonTypeOrmSourceModuleMetadataAsync.name, () => {
     let result: unknown;
 
     beforeAll(() => {
-      dataSourceOptionsServiceIdFixture = Symbol();
+      dataSourceOptionsFixture = Symbol() as unknown as DataSourceOptions;
+
       porygonTypeOrmSourceModuleSymbolsMapFixture = {
         alias: 'alias',
       } as Partial<PorygonTypeOrmSourceModuleSymbolsMap> as PorygonTypeOrmSourceModuleSymbolsMap;
 
-      result = buildPorygonTypeOrmSourceModuleMetadataAsync(
-        dataSourceOptionsServiceIdFixture,
+      result = buildPorygonTypeOrmSourceModuleMetadata(
+        dataSourceOptionsFixture,
         porygonTypeOrmSourceModuleSymbolsMapFixture,
       );
 
@@ -48,19 +48,15 @@ describe(buildPorygonTypeOrmSourceModuleMetadataAsync.name, () => {
         id: Symbol.for(
           `@cuaklabs/porygon/v1/TypeOrmSourceModuleMetadata_${porygonTypeOrmSourceModuleSymbolsMapFixture.alias}`,
         ),
-        injects: [dataSourceOptionsServiceIdFixture],
+        injects: [],
       };
 
       expect(result).toStrictEqual(expected);
     });
 
     describe('when called factory()', () => {
-      let dataSourceOptionsFixture: DataSourceOptions;
-
       beforeAll(async () => {
-        dataSourceOptionsFixture = Symbol() as unknown as DataSourceOptions;
-
-        await containerModuleMetadata.factory(dataSourceOptionsFixture);
+        await containerModuleMetadata.factory();
       });
 
       afterAll(() => {
