@@ -50,20 +50,7 @@ describe(buildPorygonTypeOrmEntityModuleSymbolsMap.name, () => {
       const expected: PorygonTypeOrmEntityModuleSymbolsMap<unknown> = {
         entity: entityFixture,
         entityHash: entityHashFixture,
-        findQueryToFindQueryTypeOrmConverter: expect.any(
-          Symbol,
-        ) as unknown as symbol,
-        insertQueryToSetTypeOrmQueryConverter: expect.any(
-          Symbol,
-        ) as unknown as symbol,
-        modelDbToModelConverter: expect.any(Symbol) as unknown as symbol,
         repository: expect.any(Symbol) as unknown as symbol,
-        updateQueryToFindQueryTypeOrmConverter: expect.any(
-          Symbol,
-        ) as unknown as symbol,
-        updateQueryToSetQueryTypeOrmConverter: expect.any(
-          Symbol,
-        ) as unknown as symbol,
       };
 
       expect(result).toStrictEqual(expected);
