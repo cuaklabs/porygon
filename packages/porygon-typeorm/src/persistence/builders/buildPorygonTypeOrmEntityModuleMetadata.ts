@@ -3,9 +3,8 @@ import { DataSource } from 'typeorm';
 
 import { PorygonTypeOrmEntityModuleSymbolsMap } from '../models/domain/PorygonTypeOrmEntityModuleSymbolsMap';
 import { PorygonTypeOrmSourceModuleSymbolsMap } from '../models/domain/PorygonTypeOrmSourceModuleSymbolsMap';
+import { porygonTypeOrmSymbolKeyVersion } from '../models/domain/porygonTypeOrmSymbolKeyVersion';
 import { buildPorygonTypeOrmEntityModule } from './buildPorygonTypeOrmEntityModule';
-
-const VERSION: string = 'v1';
 
 export function buildPorygonTypeOrmEntityModuleMetadata<TEntity>(
   porygonTypeOrmSourceModuleSymbolsMap: PorygonTypeOrmSourceModuleSymbolsMap,
@@ -19,7 +18,7 @@ export function buildPorygonTypeOrmEntityModuleMetadata<TEntity>(
         porygonTypeOrmEntityModuleSymbolsMap,
       ),
     id: Symbol.for(
-      `@cuaklabs/porygon/${VERSION}/TypeOrmEntityModuleMetadata_${porygonTypeOrmSourceModuleSymbolsMap.alias}/${porygonTypeOrmEntityModuleSymbolsMap.entityHash}`,
+      `@cuaklabs/porygon/${porygonTypeOrmSymbolKeyVersion}/TypeOrmEntityModuleMetadata_${porygonTypeOrmSourceModuleSymbolsMap.alias}/${porygonTypeOrmEntityModuleSymbolsMap.entityHash}`,
     ),
     imports,
     injects: [porygonTypeOrmSourceModuleSymbolsMap.dataSource],

@@ -5,8 +5,7 @@ import { hashString } from '../../foundation/calculations/hashString';
 import { PorygonTypeOrmEntityModuleSymbolsMap } from '../models/domain/PorygonTypeOrmEntityModuleSymbolsMap';
 import { PorygonTypeOrmEntityModuleType } from '../models/domain/PorygonTypeOrmEntityModuleType';
 import { PorygonTypeOrmSourceModuleSymbolsMap } from '../models/domain/PorygonTypeOrmSourceModuleSymbolsMap';
-
-const VERSION: string = 'v1';
+import { porygonTypeOrmSymbolKeyVersion } from '../models/domain/porygonTypeOrmSymbolKeyVersion';
 
 export function buildPorygonTypeOrmEntityModuleSymbolsMap<TEntity>(
   entity: Newable<TEntity>,
@@ -31,7 +30,7 @@ function buildPorygonTypeOrmEntityModuleSymbol(
   entityHash: string,
 ): symbol {
   return Symbol(
-    `@cuaklabs/porygon/${VERSION}/dataSource_${dataSourceAlias}/${moduleType}_${entityHash}`,
+    `@cuaklabs/porygon/${porygonTypeOrmSymbolKeyVersion}/dataSource_${dataSourceAlias}/${moduleType}_${entityHash}`,
   );
 }
 

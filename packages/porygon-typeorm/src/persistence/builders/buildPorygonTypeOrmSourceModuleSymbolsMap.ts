@@ -1,12 +1,13 @@
 import { PorygonTypeOrmSourceModuleSymbolsMap } from '../models/domain/PorygonTypeOrmSourceModuleSymbolsMap';
-
-const VERSION: string = 'v1';
+import { porygonTypeOrmSymbolKeyVersion } from '../models/domain/porygonTypeOrmSymbolKeyVersion';
 
 export function buildPorygonTypeOrmSourceModuleSymbolsMap(
   alias: string = '',
 ): PorygonTypeOrmSourceModuleSymbolsMap {
   return {
     alias,
-    dataSource: Symbol.for(`@cuaklabs/porygon/${VERSION}/dataSource_${alias}`),
+    dataSource: Symbol.for(
+      `@cuaklabs/porygon/${porygonTypeOrmSymbolKeyVersion}/dataSource_${alias}`,
+    ),
   };
 }

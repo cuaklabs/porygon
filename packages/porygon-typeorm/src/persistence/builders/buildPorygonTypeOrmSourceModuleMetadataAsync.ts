@@ -7,9 +7,8 @@ import {
 import { DataSourceOptions } from 'typeorm';
 
 import { PorygonTypeOrmSourceModuleSymbolsMap } from '../models/domain/PorygonTypeOrmSourceModuleSymbolsMap';
+import { porygonTypeOrmSymbolKeyVersion } from '../models/domain/porygonTypeOrmSymbolKeyVersion';
 import { buildPorygonTypeOrmSourceModule } from './buildPorygonTypeOrmSourceModule';
-
-const VERSION: string = 'v1';
 
 export function buildPorygonTypeOrmSourceModuleMetadataAsync(
   dataSourceOptionsServiceId: ServiceId,
@@ -24,7 +23,7 @@ export function buildPorygonTypeOrmSourceModuleMetadataAsync(
         porygonTypeOrmSourceModuleSymbolsMap,
       ),
     id: Symbol.for(
-      `@cuaklabs/porygon/${VERSION}/TypeOrmSourceModuleMetadata_${porygonTypeOrmSourceModuleSymbolsMap.alias}`,
+      `@cuaklabs/porygon/${porygonTypeOrmSymbolKeyVersion}/TypeOrmSourceModuleMetadata_${porygonTypeOrmSourceModuleSymbolsMap.alias}`,
     ),
     injects: [dataSourceOptionsServiceId],
   };
