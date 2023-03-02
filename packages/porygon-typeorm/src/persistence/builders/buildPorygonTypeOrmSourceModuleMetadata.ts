@@ -1,7 +1,7 @@
 import { ContainerModule, ContainerModuleMetadata } from '@cuaklabs/iocuak';
 import { DataSourceOptions } from 'typeorm';
 
-import { PorygonTypeOrmSourceModuleSymbolsMap } from '../models/typeorm/PorygonTypeOrmSourceModuleSymbolsMap';
+import { PorygonTypeOrmSourceModuleSymbolsMap } from '../models/domain/PorygonTypeOrmSourceModuleSymbolsMap';
 import { buildPorygonTypeOrmSourceModule } from './buildPorygonTypeOrmSourceModule';
 
 const VERSION: string = 'v1';

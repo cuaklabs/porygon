@@ -5,8 +5,8 @@ jest.mock('../../foundation/calculations/hashString');
 import { Newable } from '@cuaklabs/iocuak';
 
 import { hashString } from '../../foundation/calculations/hashString';
-import { PorygonTypeOrmEntityModuleSymbolsMap } from '../models/typeorm/PorygonTypeOrmEntityModuleSymbolsMap';
-import { PorygonTypeOrmSourceModuleSymbolsMap } from '../models/typeorm/PorygonTypeOrmSourceModuleSymbolsMap';
+import { PorygonTypeOrmEntityModuleSymbolsMap } from '../models/domain/PorygonTypeOrmEntityModuleSymbolsMap';
+import { PorygonTypeOrmSourceModuleSymbolsMap } from '../models/domain/PorygonTypeOrmSourceModuleSymbolsMap';
 import { buildPorygonTypeOrmEntityModuleSymbolsMap } from './buildPorygonTypeOrmEntityModuleSymbolsMap';
 
 describe(buildPorygonTypeOrmEntityModuleSymbolsMap.name, () => {

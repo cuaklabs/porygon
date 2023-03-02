@@ -1,8 +1,8 @@
 import { ContainerModule, ContainerModuleMetadata } from '@cuaklabs/iocuak';
 import { DataSource } from 'typeorm';
 
-import { PorygonTypeOrmEntityModuleSymbolsMap } from '../models/typeorm/PorygonTypeOrmEntityModuleSymbolsMap';
-import { PorygonTypeOrmSourceModuleSymbolsMap } from '../models/typeorm/PorygonTypeOrmSourceModuleSymbolsMap';
+import { PorygonTypeOrmEntityModuleSymbolsMap } from '../models/domain/PorygonTypeOrmEntityModuleSymbolsMap';
+import { PorygonTypeOrmSourceModuleSymbolsMap } from '../models/domain/PorygonTypeOrmSourceModuleSymbolsMap';
 import { buildPorygonTypeOrmEntityModule } from './buildPorygonTypeOrmEntityModule';
 
 const VERSION: string = 'v1';

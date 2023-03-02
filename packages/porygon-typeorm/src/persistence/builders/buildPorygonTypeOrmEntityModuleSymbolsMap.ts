@@ -2,9 +2,9 @@ import { Newable } from '@cuaklabs/iocuak';
 import { ModuleTypeToSymbolMap } from '@cuaklabs/porygon-common';
 
 import { hashString } from '../../foundation/calculations/hashString';
-import { PorygonTypeOrmEntityModuleSymbolsMap } from '../models/typeorm/PorygonTypeOrmEntityModuleSymbolsMap';
-import { PorygonTypeOrmEntityModuleType } from '../models/typeorm/PorygonTypeOrmEntityModuleType';
-import { PorygonTypeOrmSourceModuleSymbolsMap } from '../models/typeorm/PorygonTypeOrmSourceModuleSymbolsMap';
+import { PorygonTypeOrmEntityModuleSymbolsMap } from '../models/domain/PorygonTypeOrmEntityModuleSymbolsMap';
+import { PorygonTypeOrmEntityModuleType } from '../models/domain/PorygonTypeOrmEntityModuleType';
+import { PorygonTypeOrmSourceModuleSymbolsMap } from '../models/domain/PorygonTypeOrmSourceModuleSymbolsMap';
 
 const VERSION: string = 'v1';
 

@@ -4,7 +4,7 @@ import {
 } from '@cuaklabs/iocuak';
 import { DataSource, ObjectLiteral, Repository } from 'typeorm';
 
-import { PorygonTypeOrmEntityModuleSymbolsMap } from '../models/typeorm/PorygonTypeOrmEntityModuleSymbolsMap';
+import { PorygonTypeOrmEntityModuleSymbolsMap } from '../models/domain/PorygonTypeOrmEntityModuleSymbolsMap';
 
 export function buildPorygonTypeOrmEntityModule<TEntity>(
   dataSource: DataSource,
