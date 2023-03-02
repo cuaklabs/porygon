@@ -4,6 +4,8 @@ import { DataSourceOptions } from 'typeorm';
 import { PorygonTypeOrmSourceModuleSymbolsMap } from '../models/typeorm/PorygonTypeOrmSourceModuleSymbolsMap';
 import { buildPorygonTypeOrmSourceModule } from './buildPorygonTypeOrmSourceModule';
 
+const VERSION: string = 'v1';
+
 export function buildPorygonTypeOrmSourceModuleMetadata(
   dataSourceOptions: DataSourceOptions,
   porygonTypeOrmSourceModuleSymbolsMap: PorygonTypeOrmSourceModuleSymbolsMap,
@@ -15,7 +17,7 @@ export function buildPorygonTypeOrmSourceModuleMetadata(
         porygonTypeOrmSourceModuleSymbolsMap,
       ),
     id: Symbol.for(
-      `@cuaklabs/porygon/v1/TypeOrmSourceModuleMetadata_${porygonTypeOrmSourceModuleSymbolsMap.alias}`,
+      `@cuaklabs/porygon/${VERSION}/TypeOrmSourceModuleMetadata_${porygonTypeOrmSourceModuleSymbolsMap.alias}`,
     ),
     injects: [],
   };
