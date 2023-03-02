@@ -8,7 +8,7 @@ import {
 } from '@cuaklabs/iocuak';
 import { DataSourceOptions } from 'typeorm';
 
-import { PorygonTypeOrmSourceModuleSymbolsMap } from '../models/typeorm/PorygonTypeOrmSourceModuleSymbolsMap';
+import { PorygonTypeOrmSourceModuleSymbolsMap } from '../../models/domain/PorygonTypeOrmSourceModuleSymbolsMap';
 import { buildPorygonTypeOrmSourceModule } from './buildPorygonTypeOrmSourceModule';
 import { buildPorygonTypeOrmSourceModuleMetadata } from './buildPorygonTypeOrmSourceModuleMetadata';
 

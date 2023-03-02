@@ -1,8 +1,9 @@
 import { ContainerModule, ContainerModuleMetadata } from '@cuaklabs/iocuak';
 import { DataSourceOptions } from 'typeorm';
 
-import { PorygonTypeOrmSourceModuleSymbolsMap } from '../models/typeorm/PorygonTypeOrmSourceModuleSymbolsMap';
-import { buildPorygonTypeOrmSourceModule } from './buildPorygonTypeOrmSourceModule';
+import { PorygonTypeOrmSourceModuleSymbolsMap } from '../../models/domain/PorygonTypeOrmSourceModuleSymbolsMap';
+import { porygonTypeOrmSymbolKeyVersion } from '../../models/domain/porygonTypeOrmSymbolKeyVersion';
+import { buildPorygonTypeOrmSourceModule } from '../iocuak/buildPorygonTypeOrmSourceModule';
 
 export function buildPorygonTypeOrmSourceModuleMetadata(
   dataSourceOptions: DataSourceOptions,
@@ -15,7 +16,7 @@ export function buildPorygonTypeOrmSourceModuleMetadata(
         porygonTypeOrmSourceModuleSymbolsMap,
       ),
     id: Symbol.for(
-      `@cuaklabs/porygon/v1/TypeOrmSourceModuleMetadata_${porygonTypeOrmSourceModuleSymbolsMap.alias}`,
+      `@cuaklabs/porygon/${porygonTypeOrmSymbolKeyVersion}/TypeOrmSourceModuleMetadata_${porygonTypeOrmSourceModuleSymbolsMap.alias}`,
     ),
     injects: [],
   };
