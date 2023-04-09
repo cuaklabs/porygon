@@ -21,7 +21,7 @@
   "dependencies": {
     "@cuaklabs/iocuak": "0.6.1",
     "@cuaklabs/porygon-common": "workspace:../porygon-common",
-    "typeorm": "0.3.13"
+    "typeorm": "0.3.14"
   },
   "devDependencies": {
     "@jest/globals": "29.5.0",
