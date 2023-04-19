@@ -2,7 +2,7 @@
   "name": "root",
   "private": true,
   "description": "Hexagonal architecture framework",
-  "packageManager": "pnpm@7.32.1",
+  "packageManager": "pnpm@7.32.2",
   "scripts": {
     "build:all": "turbo run build",
     "commit": "commit",
