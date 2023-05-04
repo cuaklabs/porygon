@@ -34,9 +34,9 @@
   "homepage": "https://github.com/cuaklabs/porygon#readme",
   "devDependencies": {
     "@changesets/cli": "^2.26.0",
-    "@commitlint/cli": "17.6.1",
-    "@commitlint/config-conventional": "17.6.1",
-    "@commitlint/prompt-cli": "17.6.1",
+    "@commitlint/cli": "17.6.3",
+    "@commitlint/config-conventional": "17.6.3",
+    "@commitlint/prompt-cli": "17.6.3",
     "@cuaklabs/eslint-config-porygon": "workspace:./packages/eslint-config-porygon",
     "@cuaklabs/porygon-jest-config": "workspace:./packages/porygon-jest-config",
     "@cuaklabs/porygon-prettier-config": "workspace:./packages/porygon-prettier-config",
